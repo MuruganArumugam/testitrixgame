@@ -1,0 +1,187 @@
+<html>
+<style>
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 35px;
+}
+
+
+.img {
+    float:  left;
+    width:  700px;
+    height: 700px;
+    background-size: cover;
+	float:right;
+
+}
+h1 { 
+                color:green; 
+            } 
+            select { 
+           #D3D3D3     -webkit-appearance: none; 
+                -moz-appearance: none; 
+                -ms-appearance: none; 
+                appearance: none; 
+                outline: 0; 
+                background:#2F4F4F; 
+                background-image: none; 
+                border:1px solid black; 
+            } 
+            .select { 
+                position: relative; 
+                display: block; 
+                width: 20em; 
+                height: 3em; 
+                line-height: 3; 
+                background: #2C3E50; 
+                overflow: hidden; 
+                border-radius: .25em; 
+            } 
+            select { 
+                width: 100%; 
+                height: 100%; 
+                margin: 0; 
+                padding: 0 0 0 .5em; 
+                color: white; 
+                cursor: pointer; 
+            } 
+            select::-ms-expand { 
+                display: none; 
+            }  
+            .select::after { 
+                content: '\25BC'; 
+                position: absolute; 
+                top: 0; 
+                right: 0; 
+                bottom: 0; 
+                padding: 0 1em; 
+                background: #34495E; 
+                pointer-events: none; 
+            } 
+            .select:hover::after { 
+                color: #F39C12; 
+            } 
+              
+            <!-- For different browsers -->
+            .select::after { 
+                -webkit-transition: .25s all ease; 
+                -o-transition: .25s all ease; 
+                transition: .25s all ease; 
+            } 
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+	position:fixed;
+	bottom:160px;
+	right:900px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+</style>
+<body>
+<div class="header">
+<p><u>POKEMON GO</u></p>
+<p>Choose your startup pokemon:</p>
+</div>
+
+<br/><br/>
+<div style="float:right;  ">
+<img  class="img" id="imageToSwap" src="file:///home/murugan/Downloads/poke.jpg" />
+</div>
+<br/><br/>
+
+<select id="dlist"    style="height:40px;width:700px;font-size:20px;float:left;" onChange="swapImage()">
+<option value="file:///home/murugan/Downloads/poke2.jpg" style="font-size:20px;">select your pokemon</option>
+<option value="file:///home/murugan/Downloads/pika.png" style="font-size:20px;">pikachu</option>
+<option value="file:///home/murugan/Downloads/bulbazzar.png" style="font-size:20px;">bulbazar</option>
+<option value="file:///home/murugan/Downloads/squar.png" style="font-size:20px;">squartle</option>
+<option value="file:///home/murugan/Downloads/char2.png" style="font-size:20px;">charmander</option>
+</select>
+
+<br/>
+<br/>
+<button class="button" style="down:25px;"><span>GO </span></button>
+
+
+<script type="text/javascript">
+function swapImage(){
+	var image = document.getElementById("imageToSwap");
+	var dropd = document.getElementById("dlist");
+	image.src = dropd.value;	
+};
+</script>
+</body>
+</html>
